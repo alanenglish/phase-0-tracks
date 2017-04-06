@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kitten Survey</title>
+</head>
+<body>
+  <form name="kitten_survey" action="success.html" method="post">
+  <div>
+    <label>How many kittens do you have?</label>
+    <select name="cats_num">
+      <option value="none">0 :(</option>
+      <option value="one_to_three">1-3</option>
+      <option value="more_than_three">3+</option>
+    </select>
+  </div>
+  <div>
+    <textarea name="like_about_cats" placeholder="Tell us what you like most about kittens!"></textarea>
+  </div>
+  <div>
+    <label>I would like to adopt a kitten!</label>
+    <input type="checkbox" name="adoption_answer" value="yes">
+  </div>
+  <div>
+    <label>What is your breed preference?</label>
+    <input type="text" name="breed">
+  </div>
+  <div>
+    <label>If you would like to receive our monthly Kitten Newsletter, enter your email address:</label>
+    <input type="email" name="email">
+  </div>
+  <button type="submit">Submit</button>
+</form>
+</body>
+</html>
