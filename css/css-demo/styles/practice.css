@@ -12,3 +12,15 @@
 .accomplishments {
   font-size: .8em;
 }
+
+#personal-objective:hover {
+  font-weight: bold;
+}
+
+section section {
+  color: darkblue;
+}
+
+section section h3 {
+  text-align: center;
+}
