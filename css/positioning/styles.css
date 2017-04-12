@@ -12,16 +12,16 @@
 
 #hat {
   position: absolute;
-  margin: 285px;
-  margin-top: 115px;
+  top: 140px;
+  left: 280px;
   z-index: 2;
   padding: 100px;
 }
 
 #glasses {
   position: absolute;
-  margin: 342px;
-  margin-top: 300px;
+  top: 300px;
+  left: 342px;
   z-index: 3;
   padding: 100px;
 }
