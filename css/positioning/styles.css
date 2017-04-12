@@ -1,0 +1,27 @@
+.dress-octopus {
+  position: relative;
+}
+
+#octopus {
+  position: absolute;
+  margin: 300px;
+  margin-top: 200px;
+  z-index: 1;
+  padding: 100px;
+}
+
+#hat {
+  position: absolute;
+  margin: 285px;
+  margin-top: 115px;
+  z-index: 2;
+  padding: 100px;
+}
+
+#glasses {
+  position: absolute;
+  margin: 342px;
+  margin-top: 300px;
+  z-index: 3;
+  padding: 100px;
+}
