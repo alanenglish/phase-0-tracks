@@ -1,0 +1,112 @@
+Elevator Algorithm
+
+- When approaching elevator, ask human what floor is desired.
+
+- Scan wall where elevator doors exist to determine current floor.
+	- If desired floor is above or higher than current floor:
+		- press the up button indicated by an arrow pointing up and proceed to next step.
+	- If desired floor is below or lower than current floor:
+		- press the down button indicated by an arrow pointing down and proceed to next step.
+	- If desired floor is parking garage, and you are currently on a floor other than parking garage:
+		- assume the desired floor is below your current floor:
+			- press the down button indicated by an arrow pointing down and proceed to next step
+
+- When elevator door opens and makes “ding” sound, confirm this is appropriate elevator by checking if the up/down indicator light is pointed in desired direction.
+	- If indicator displayed is correct direction to desired floor:
+		- enter elevator and proceed to next step.
+	- If indicator displayed is incorrect direction to desired floor:
+		- do not enter elevator and wait for next available elevator door to open.
+
+- Upon entering elevator, navigate to floor level button panel which can be found to the right or left of the elevator door.
+	- Recall what floor is desired and press the appropriate floor level button.
+	- Ask human if they are in a hurry.
+		- If answer is yes, human is in a hurry:
+			- press door close button but act like you are trying to keep the door open if others approach.
+		- If answer is no, human is not in a hurry, proceed to next step.
+	- Once door closes, elevator will begin to move in appropriate direction toward desired floor.
+	- If at any time during the elevator ride, the elevator stops and doors do not open:
+		- open compartment under button display which contains old school phone:
+			- dial emergency number and notify dispatch you are stuck on elevator.
+	- When elevator door opens at a new floor, listen and scan the elevator to confirm which floor you are now on.
+		- If new floor is not your desired floor:
+			- stay on the elevator and allow other riders to exit, wait for your floor.
+		- If new floor is your desired floor:
+			- exit the elevator with human
+
+- You have reached your desired floor.
+
+
+Real-Life Algorithm - Morning Dog Walk/Coffee Run
+
+- When the local time is between 7:00am and 9:00am, Alan needs a coffee and Harper needs a walk.
+
+- Make sure Harper has eaten breakfast so he has enough fuel for his walk:
+	- If Harper has eaten a hearty breakfast already, proceed to harness preparation step.
+	- If Harper hasn’t eaten breakfast:
+		- Make sure bowl is filled with grain free Fromm dog food
+		- Call Harper over to his bowl to initiate the meal process
+		- If Harper begins to eat out of his bowl on his own like a normal dog, its your lucky day.
+		- If Harper acts very confused like he has never eaten a meal before:
+			- Sit down next to his bowl to make him feel comfortable, if he is willing to eat now, proceed to harness preparation when finished - if not, proceed to next step,
+			- Sprinkle some food on the ground in front of his bowl, if he will compromise on eating this way, proceed to harness preparation when finished - if not, proceed to next step,
+			- Grab a handful of food and attempt to have him eat out of your hand, if this does the trick, proceed to harness preparation when finished - if not, proceed to next step,
+			- Try to feed two pellets at a time straight to mouth from top of thumb and index finger, if this is his preferred method of eating today proceed to harness preparation when finished - if not, proceed to next step,
+			- If all else fails, play fetch with food pellets one at a time by throwing them nearby, whether this works or not, we are out of ideas on how to feed the dog - proceed to harness preparation whether he eats or not.
+
+- We now must get Harper suited up for his walk by putting on his harness.
+	- Grab his harness from his toy box, if the harness isn’t there:
+		- Check outside the front door, if not there,
+		- Ask Harpers mom where she hid it, and proceed to next step.
+	- Once harness is in possession, grab treats and sit on couch.
+	- Hide harness and call Harper over
+	- Pick up puppy and set him on lap
+	- Pull out harness and gently guide his neck through, give treat.
+	- Put his leg through hole and buckle the harness, give treat.
+	- Grab leash and attach to harness - puppy is now ready for walk.
+
+- Harper is now ready to head out of the door, make sure to bring wallet, keys, and phone.
+	- If missing any of the above items:
+		- Check the entryway table - if all items obtained, proceed to departure.
+		- Check the bedroom lacquer tray - if all items obtained, proceed to departure.
+		- Check the kitchen counter - if all items obtained, proceed to departure.
+		- If still can’t find phone and/or keys, leave without them.
+		- If can’t find wallet, no coffee for Alan, proceed to exit.
+
+- It is time to leave the apartment and head to Starbucks.
+- Exit apartment front door and head down entryway staircase to street level, and notice weather.
+	- If it is raining, grab the umbrella next to the door, then exit front door.
+	- If it isn’t raining, exit front door.
+
+- While walking down the street, allow dog to stop and sniff things for no more than 10 seconds.
+	- If sniffs for more than 10 seconds, gently pull on leash to initiate movement.
+	- If still won’t move, make noise and motion dog to continue walking.
+	- If still won’t move, pick up dog and carry for 20 feet and then put back down on ground.
+	- If dog continues to stall, repeat steps above.
+	- If dog goes potty during walk:
+		- If number 1, continue walking normally.
+		- If number 2, pull out poop bag attached to leash.
+			- Stick hand inside poop bag and grab poop with the outside of the bag
+			- pull the poop inwards so that it is now at the bottom of the bag, and tie the bag off.
+			- find nearest trashcan and discard poop
+			- Continue walk to Starbucks
+
+- Once arrive at Starbucks, tie leash to rack near entryway and proceed inside
+	- If temperature above 60 degrees Fahrenheit:
+		- order iced coffee
+	- If temperature below 60 degrees Fahrenheit:
+		- order regular pike hot coffee
+	- If slept less than 6 hours the previous night
+		- order venti size
+	- If slept more than 8 hours the previous night
+		- order tall size
+	- If slept between 6 and 8 hours the previous night
+		- order grande size
+
+- Exit Starbucks and untie leash from rack near entryway, proceed home with happy puppy and delicious coffee.
+
+	
+
+	
+
+
+	
