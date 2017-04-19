@@ -1,0 +1,35 @@
+- When approaching elevator, ask human what floor is desired.
+- Scan wall where elevator doors exist to determine current floor.
+	- If desired floor is above or higher than current floor:
+		- press the up button indicated by an arrow pointing up and proceed to next step.
+	- If desired floor is below or lower than current floor:
+		- press the down button indicated by an arrow pointing down and proceed to next step.
+	- If desired floor is parking garage, and you are currently on a floor other than parking garage:
+		- assume the desired floor is below your current floor:
+			- press the down button indicated by an arrow pointing down and proceed to next step
+- When elevator door opens and makes “ding” sound, confirm this is appropriate elevator by checking if the up/down indicator is lit in the direction you desire.
+	- If indicator displayed is correct direction to desired floor:
+		- enter elevator and proceed to next step.
+	- If indicator displayed is incorrect direction to desired floor:
+		- do not enter elevator and wait for next available elevator door to open.
+- Upon entering elevator, navigate to floor level button panel which can be found to the right or left of the elevator door.
+	- Recall what floor is desired and press the appropriate floor level button.
+	- Ask human if they are in a hurry.
+		- If answer is yes, human is in a hurry:
+			- press door close button but act like you are trying to keep the door open if others approach.
+		- If answer is no, human is not in a hurry, proceed to next step.
+	- Once door closes, elevator will begin to move in appropriate direction toward desired floor.
+	- If at any time during the elevator ride, the elevator stops and doors do not open:
+		- open compartment under button display which contains old school phone:
+			- dial emergency number and notify dispatch you are stuck on elevator.
+	- When elevator door opens at a new floor, listen and scan the elevator to confirm which floor you are now on.
+		- If new floor is not your desired floor:
+			- stay on the elevator and allow other riders to exit, wait for your floor.
+		- If new floor is your desired floor:
+			- exit the elevator with human
+- You have reached your desired floor.
+
+	
+
+
+	
