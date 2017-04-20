@@ -4,6 +4,7 @@ def process_employee
   employee_count = gets.chomp.to_i
 
   until employee_count == 0
+
     puts "What is your name?"
     employee_name = gets.chomp
       case employee_name
@@ -29,7 +30,7 @@ def process_employee
     puts "Our company cafeteria serves garlic bread. Should we order some for you?"
     likes_garlic_bread = gets.chomp.downcase
       case likes_garlic_bread
-      when "yes", "sure", "absolutely", "please", "y", "yes please", "of course"
+      when "yes", "sure", "absolutely", "please", "y", "yes please", "of course", "yeah", "yea"
         likes_garlic_bread = true
       else
         likes_garlic_bread = false
@@ -38,7 +39,7 @@ def process_employee
     puts "Would you like to enroll in the company's health insurance?"
     needs_health_insurance = gets.chomp.downcase
       case needs_health_insurance
-      when "yes", "sure", "of course", "absolutely", "yes please", "y"
+      when "yes", "sure", "absolutely", "please", "y", "yes please", "of course", "yeah", "yea"
         needs_health_insurance = true
       else
         needs_health_insurance = false
@@ -68,6 +69,7 @@ def process_employee
         puts "Lets process your next employee!"
       end
   end
+  puts  "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
 end
 
 p process_employee
