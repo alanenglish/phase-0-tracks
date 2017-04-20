@@ -44,12 +44,18 @@ def process_employee
         needs_health_insurance = false
       end
 
-    puts "THE RESULTS ARE IN!"
+    puts "Please list any allergies you have. When finished, please type 'done'."
+    allergy_suspicion = nil
+      until allergy_suspicion == "done" || allergy_suspicion == "sunshine"
+      allergy_suspicion = gets.chomp
+      end  
+
+    puts "THE RESULTS ARE IN! WE'VE CONCLUDED THE APPLICANT IS:"
       if vampire_name
         puts "Definitely a vampire!"
       elsif !confirm_age && !likes_garlic_bread && !needs_health_insurance
-        puts "Almost certainly a vampire."
-      elsif !confirm_age && (!likes_garlic_bread || !needs_health_insurance)
+        puts "Almost certainly a vampire."  
+      elsif allergy_suspicion == "sunshine" || (!confirm_age && (!likes_garlic_bread || !needs_health_insurance))
         puts "Probably a vampire."
       elsif confirm_age && (likes_garlic_bread || needs_health_insurance)
         puts "Probably not a vampire."
