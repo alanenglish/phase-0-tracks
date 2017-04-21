@@ -10,14 +10,18 @@ def encrypt(word)
   index = 0
   while index < word.length
     unless word[index] == " "
-      word[index] = word[index].next!
+      if word[index] == "z"
+        word[index] = "a"
+      else
+        word[index] = word[index].next!
+      end
     end
     index += 1
   end
   p word
 end
 
-encrypted_word = encrypt("program")
+encrypted_word = encrypt("zed")
 
 # - Set index variable to 0
 # - Set alphabet variable 
