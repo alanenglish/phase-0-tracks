@@ -47,12 +47,31 @@ def decrypt(word)
   return word
 end
 
-p encrypt("abc")
-p encrypt("zed")
-p decrypt("bcd")
-p decrypt("afe")
-p decrypt(encrypt("swordfish"))
+# p encrypt("abc")
+# p encrypt("zed")
+# p decrypt("bcd")
+# p decrypt("afe")
+# p decrypt(encrypt("swordfish"))
 
 # Once a value has been returned by a method, the method holds that value. 
 # Since we call the encrypt method within the decrypt method, the value of 
 # encrypt is used as the argument for the decrypt method.
+  
+puts "Would you like to encrypt or decrypt a password?"
+
+while user_input = gets.chomp 
+  case user_input
+  when "encrypt"
+    puts "What is the password?"
+    password = gets.chomp.downcase
+    p encrypt(password)
+    break 
+  when "decrypt"
+    puts "What is the password?"
+    password = gets.chomp.downcase
+    p decrypt(password)
+    break
+  else
+    puts "Try again."
+  end
+end
