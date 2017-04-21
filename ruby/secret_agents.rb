@@ -6,9 +6,11 @@
 # - Print newly encrypted word
 
 def encrypt(word)
-index = 0
+  index = 0
   while index < word.length
-    word[index] = word[index].next!
+    unless word[index] == " "
+      word[index] = word[index].next!
+    end
     index += 1
   end
   p word
