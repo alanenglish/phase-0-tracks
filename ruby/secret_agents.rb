@@ -4,7 +4,7 @@
 #       - Find character index value
 #       - Reassign character to the next corresponding letter
 #    - Add 1 to index variable
-# - Print newly encrypted word
+# - Return newly encrypted word
 
 def encrypt(word)
   index = 0
@@ -18,10 +18,8 @@ def encrypt(word)
     end
     index += 1
   end
-  p word
+  return word
 end
-
-encrypted_word = encrypt("zed")
 
 # - Set index variable to 0
 # - Set alphabet variable 
@@ -33,7 +31,7 @@ encrypted_word = encrypt("zed")
 #      - Use alpha_index to find corresponding letter in alphabet
 #      - Assign corresponding letter in alphabet to current word index
 #   - Add 1 to index variable
-# - Print decrypted word
+# - Return decrypted word
 
 
 def decrypt(word)
@@ -46,10 +44,15 @@ def decrypt(word)
     end
     index+=1
   end
-  p word
+  return word
 end
 
-decrypt(encrypted_word)
+p encrypt("abc")
+p encrypt("zed")
+p decrypt("bcd")
+p decrypt("afe")
+p decrypt(encrypt("swordfish"))
 
-
-
+# Once a value has been returned by a method, the method holds that value. 
+# Since we call the encrypt method within the decrypt method, the value of 
+# encrypt is used as the argument for the decrypt method.
