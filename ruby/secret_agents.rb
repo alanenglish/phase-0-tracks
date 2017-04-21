@@ -56,6 +56,17 @@ end
 # Once a value has been returned by a method, the method holds that value. 
 # Since we call the encrypt method within the decrypt method, the value of 
 # encrypt is used as the argument for the decrypt method.
+
+# - Ask secret agent if they would like encrypt or decrypt password.
+# - When user chooses encrypt
+#   - Ask for the password
+#   - Call encrypt method with password argument
+#   - Break loop 
+# - When user chooses decrypt
+#   - Ask for the password
+#   - Call decrypt method with password argument
+#   - Break loop
+# - When user enters any other string, ask them to 'Try Again.'
   
 puts "Would you like to encrypt or decrypt a password?"
 
