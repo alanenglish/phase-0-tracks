@@ -1,23 +1,31 @@
 # Replace in the "<???>" with the appropriate method (and arguments, if any).
 # Uncomment the calls to catch these methods red-handed.
 
-# When there's more than one suspect who could have
+# When there's more than one suspect who could have 
 # committed the crime, add additional calls to prove it.
 
-# "iNvEsTiGaTiOn".<???>
+p "iNvEsTiGaTiOn".swapcase
 # => “InVeStIgAtIoN”
 
-# "zom".<???>
-# => “zoom”
+p "zom".gsub(/[o]/, "o" => "oo")
+p "zom".insert(2, "o")
+p "zom".replace "zoom"
+p "zom".sub("o", "oo")
+# => "zoom"
 
-# "enhance".<???>
+p "enhance".center(15)
+p "enhance".replace("    enhance    ")
 # => "    enhance    "
 
-# "Stop! You’re under arrest!".<???>
+p "Stop! You’re under arrest!".upcase
+p "Stop! You're under arrest!". replace("STOP! YOU'RE UNDER ARREST!")
 # => "STOP! YOU’RE UNDER ARREST!"
 
-# "the usual".<???>
-#=> "the usual suspects"
+p "the usual".concat(" suspects")
+p "the usual" << " suspects"
+p "the usual".replace "the usual suspects"
+p "the usual".insert(9, " suspects")
+# => "the usual suspects"
 
 # " suspects".<???>
 # => "the usual suspects"
