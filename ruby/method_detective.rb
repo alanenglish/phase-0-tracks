@@ -18,30 +18,42 @@ p "enhance".replace("    enhance    ")
 # => "    enhance    "
 
 p "Stop! You’re under arrest!".upcase
-p "Stop! You're under arrest!". replace("STOP! YOU'RE UNDER ARREST!")
 # => "STOP! YOU’RE UNDER ARREST!"
 
 p "the usual".concat(" suspects")
 p "the usual" << " suspects"
 p "the usual".replace "the usual suspects"
 p "the usual".insert(9, " suspects")
+p "the usual" + " suspects"
 # => "the usual suspects"
 
-# " suspects".<???>
+p " suspects".prepend("the usual")
+p " suspects".insert(0, "the usual")
+p " suspects".replace("the usual suspects")
+p " suspects".sub(" suspects", "the usual suspects")
 # => "the usual suspects"
 
-# "The case of the disappearing last letter".<???>
+p "The case of the disappearing last letter".chop
+p "The case of the disappearing last letter".chomp("r")
+p "The case of the disappearing last letter"[0..38]
+p "The case of the disappearing last letter"[-40..-2]
+p "The case of the disappearing last letter".sub("letter", "lette")
 # => "The case of the disappearing last lette"
 
-# "The mystery of the missing first letter".<???>
+p "The mystery of the missing first letter"[1..39]
+p "The mystery of the missing first letter"[-38..-1]
+p "The mystery of the missing first letter".sub("The", "he")
 # => "he mystery of the missing first letter"
 
-# "Elementary,    my   dear        Watson!".<???>
+p "Elementary,    my   dear        Watson!".squeeze" "
 # => "Elementary, my dear Watson!"
 
-# "z".<???>
+p "z".ord
 # => 122 
 # (What is the significance of the number 122 in relation to the character z?)
+# This is interesting, in the American Standard Code for Information Interchange, lowercase a begins at 97 and the alphabet continues until
+# it reaches 122 for z, I have no idea what the significance is - can't seem
+# to find an easy answer by searching. 
 
-# "How many times does the letter 'a' appear in this string?".<???>
+p "How many times does the letter 'a' appear in this string?".count("a")
 # => 4
