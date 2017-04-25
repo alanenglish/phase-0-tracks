@@ -27,3 +27,19 @@ prospective_client[:age] = gets.chomp.to_i
 puts "How many children do you have?"
 prospective_client[:children] = gets.chomp.to_i
 
+puts "Do you prefer Modern, Traditional, Art Deco, Industrial, Rustic, or Mid-Century design? If other, please provide."
+prospective_client[:theme] = gets.chomp
+
+puts "Do you prefer Gray Scale or Colors?"
+prospective_client[:color] = gets.chomp.downcase
+  case prospective_client[:color]
+  when "gray scale", "gray", "scale"
+    prospective_client[:color] = false
+  else 
+    prospective_client[:color] = true
+  end
+
+
+puts "What is your budget for this project in dollars?"
+prospective_client[:budget] = gets.chomp.gsub(/[^\d\.]/, '').to_f
+
