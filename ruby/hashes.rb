@@ -16,3 +16,14 @@ INTERIOR DESIGN INC. - PROSPECTIVE CLIENT
 - Print final has program onto screen
 =end
 
+prospective_client = {}
+
+puts "Please provide your full name:"
+prospective_client[:name] = gets.chomp
+
+puts "How old are you?"
+prospective_client[:age] = gets.chomp.to_i
+
+puts "How many children do you have?"
+prospective_client[:children] = gets.chomp.to_i
+
