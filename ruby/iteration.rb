@@ -77,3 +77,21 @@ p numbers
 
 letters.delete_if {|greek, letter| letter < "d" }
 p letters
+
+# Question 2
+
+letters = {
+  alpha: "a",
+  beta: "b",
+  delta: "d",
+  epsilon: "e",
+}
+
+numbers = [1, 2, 3, 4, 5]
+
+numbers.keep_if {|digit| digit < 3}
+p numbers
+
+letters.keep_if {|greek, letter| letter < "d"}
+p letters
+
