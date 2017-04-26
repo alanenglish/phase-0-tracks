@@ -95,3 +95,21 @@ p numbers
 letters.keep_if {|greek, letter| letter < "d"}
 p letters
 
+# Question 3
+
+letters = {
+  alpha: "a",
+  beta: "b",
+  delta: "d",
+  epsilon: "e",
+}
+
+numbers = [1, 2, 3, 4, 5]
+
+newnumbers = numbers.select {|digit| digit.odd?}
+p numbers
+p newnumbers
+
+newletters = letters.select {|greek, letter| letter > "b"}
+p letters
+p newletters
