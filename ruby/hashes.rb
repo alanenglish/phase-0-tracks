@@ -61,7 +61,7 @@ edit = gets.chomp.downcase
         answer = gets.chomp.gsub(/[^\d\.]/, '').to_f
       elsif edit_key == :color
         answer = gets.chomp
-          if answer == "color" || aswer == "colors"
+          if answer == "color" || answer == "colors"
             answer = true
           else 
             answer = false
