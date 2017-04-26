@@ -30,7 +30,7 @@ puts "Original Data:"
 p colors
 
 colors.each do |hue|
-  p hue
+  puts "The color #{hue} is #{hue}..." 
 end
 
 puts "After .each call:"
@@ -48,15 +48,32 @@ puts "After .each call:"
 p turtles
 
 # .map! Array
-
 puts "Original Data:"
 p colors
 
 
 colors.map! do |hue|
-  puts hue
+  puts "The color #{hue} is #{hue}..."
   hue.upcase
 end
 
 puts "After .map call:"
 p colors
+
+# Release 2
+# Question 1
+
+letters = {
+  alpha: "a",
+  beta: "b",
+  delta: "d",
+  epsilon: "e",
+}
+
+numbers = [1, 2, 3, 4, 5]
+
+numbers.delete_if {|digit| digit < 3}
+p numbers
+
+letters.delete_if {|greek, letter| letter < "d" }
+p letters
