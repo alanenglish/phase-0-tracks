@@ -113,3 +113,21 @@ p newnumbers
 newletters = letters.select {|greek, letter| letter > "b"}
 p letters
 p newletters
+
+# Question 4
+
+letters = {
+  alpha: "a",
+  beta: "b",
+  delta: "d",
+  epsilon: "e",
+  alpha2: "a"
+}
+
+numbers = [1, 2, 3, 4, 5, 1]
+
+newnumbers2 = numbers.drop_while {|digit| digit < 3}
+p newnumbers2
+
+newletters2 = Hash[letters.drop_while {|greek, letter| letter < "d"}]
+p newletters2
