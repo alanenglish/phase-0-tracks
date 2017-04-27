@@ -20,3 +20,12 @@ food_court = {
     menu: ["Tropical Paradise", "Mango Crush", "Strawberry Bonanza"]
   }
 }
+
+p food_court[:chick_fil_a][:menu]
+p food_court[:china_wok][:menu] << "Hot and Sour Soup"
+p food_court[:smoothie_king][:manager] = "J.B. Smoove"
+p food_court[:burger_king][:menu].reverse!
+p food_court[:china_wok][:manager]
+p food_court[:chick_fil_a][:menu].push("Milk Shake")
+p food_court[:smoothie_king][:menu][2]
+p food_court
