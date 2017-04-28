@@ -107,3 +107,19 @@ end
 bubbles = [47, 63, 88, 14, 34, 65, 21, 98, 23, 52, 82, 55, 12]
 p bubble_sort(bubbles)
 
+def bubblesort(list)
+  swapped = true
+  while swapped do
+    swapped = false
+    0.upto(list.size-2) do |i|
+      p "run"
+      if list[i] > list[i+1]
+        list[i], list[i+1] = list[i+1], list[i]
+        swapped = true
+      end
+    end    
+  end
+  list
+end
+
+p bubblesort(bubbles)
