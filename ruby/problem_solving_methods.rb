@@ -112,7 +112,6 @@ def bubblesort(list)
   while swapped do
     swapped = false
     0.upto(list.size-2) do |i|
-      p "run"
       if list[i] > list[i+1]
         list[i], list[i+1] = list[i+1], list[i]
         swapped = true
