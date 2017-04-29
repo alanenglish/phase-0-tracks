@@ -12,3 +12,10 @@
 # - Swap the first and last name
 # - Join together as string
 # - Print result
+
+def encrypt(name)
+  new_alias = name.downcase.split("")
+  vowels = "aeiou".split("")
+  consonants = "bcdfghjklmnpqrstvwxyz".split("")
+end
+
