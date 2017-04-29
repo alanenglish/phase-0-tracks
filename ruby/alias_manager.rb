@@ -17,5 +17,22 @@ def encrypt(name)
   new_alias = name.downcase.split("")
   vowels = "aeiou".split("")
   consonants = "bcdfghjklmnpqrstvwxyz".split("")
+  index = 0
+  new_alias.each do |letter|
+    if letter == "u"
+      new_alias[index] = "a"
+    elsif letter == "z"
+      new_alias[index] = "b"  
+    elsif vowels.include?(letter)
+        vowel = vowels.index(letter)+1
+        new_alias[index] = vowels[vowel]
+    elsif consonants.include?(letter)
+        consonant = consonants.index(letter)+1
+        new_alias[index] = consonants[consonant]
+    else
+      letter
+    end
+  index += 1
+  end
 end
 
