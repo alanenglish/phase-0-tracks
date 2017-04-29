@@ -37,3 +37,5 @@ def encrypt(name)
   new_alias = new_alias.join("").split(" ").each {|name| name.capitalize!}.rotate.join(" ")
 end
 
+p encrypt("Felicia Torres")
+
