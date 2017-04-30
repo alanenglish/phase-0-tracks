@@ -13,6 +13,23 @@ p zombie_apocalypse_supplies.join(" * ")
 # in alphabetical order. Do not use any special built-in methods.
 # ----
 
+def alpha_sort_method(arr)
+  return arr if arr.length <= 1
+  loop do
+    sorted = false
+    (arr.length-1).times do |i|
+      if arr[i].downcase > arr[i+1].downcase
+        arr[i], arr[i+1] = arr [i+1], arr[i]
+        sorted = true
+      end
+    end
+    break if !sorted
+  end
+  arr
+end
+
+p alpha_sort_method(zombie_apocalypse_supplies)
+
 # 3. Create a method to see if a particular item (string) is in the
 # zombie_apocalypse_supplies. Do not use any special built-in methods.
 # For instance: are boots in your list of supplies?
