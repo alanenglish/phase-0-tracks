@@ -35,7 +35,26 @@ def encrypt(name)
   index += 1
   end
   new_alias = new_alias.join("").split(" ").each {|name| name.capitalize!}.rotate.join(" ")
+  puts "Your alias has been processed. #{name} will now be known as #{new_alias}."
+
+new_alias 
 end
 
-p encrypt("Felicia Torres")
+# encrypt("Felicia Torres")
+# Create database for user entries
+encrypted_database = []
+# Loop until user enters "quit"
+loop do
+  puts "Please enter an agents name to retrieve their secret alias. (please type 'quit' to exit)."
+  name = gets.chomp
+    if name == "quit"
+      break
+    else
+        name = name.split(" ").each {|name| name.capitalize!}.join(" ")
+        encrypted_database << {"Real Name" => name, "Encrypted Name" => encrypt(name)}
+    end
+end
+# Print list of results
+puts "Here is a list of all DBC Agents and their secret alias - keep this hidden and safe!"
+p encrypted_database
 
