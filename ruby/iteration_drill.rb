@@ -93,7 +93,17 @@ extinct_animals.each {|key, value| puts "#{key} - #{value} *"}
 # the year 2000. Do not use any special built-in methods.
 # ----
 
+def extinct_prior(hash)
+  new_animals = {}
+  hash.each do |key, value|
+    if value < 2000
+    new_animals[key] = value
+  end
+end
+hash = new_animals
+end
 
+p extinct_prior(extinct_animals)
 
 # 3. Our calculations were completely off, turns out all of those animals went
 # extinct 3 years before the date provided. Update the values in extinct_animals
