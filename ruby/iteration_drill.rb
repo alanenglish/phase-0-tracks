@@ -69,6 +69,8 @@ other_survivor_supplies = [ "warm clothes", "rations", "compass", "camp stove",
                             "solar battery", "flashlight"]
 # ----
 
+combined_supplies = (zombie_apocalypse_supplies + other_survivor_supplies).uniq
+
 # Hash Drills
 
 extinct_animals = {
