@@ -139,3 +139,13 @@ p search_hash("Saiga Antelope", extinct_animals)
 # Find the built-in method that helps you accomplish this in the Ruby documentation
 # for Hashes.
 # ----
+
+def remove_animal(key, hash)
+  new_array = hash.assoc(key)
+  hash.delete(key)
+  new_array
+end
+
+p remove_animal("Passenger Pigeon", extinct_animals)
+# p extinct_animals
+
