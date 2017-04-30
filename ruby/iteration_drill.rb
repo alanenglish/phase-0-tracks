@@ -123,6 +123,17 @@ p extinct_animals
 # Do not use any special built-in methods.
 # ----
 
+def search_hash(animal, hash)
+  hash.each do |key, value|
+    return true if animal == key
+  end
+  false
+end
+
+p search_hash("Andean Cat", extinct_animals)
+p search_hash("Dodo", extinct_animals)
+p search_hash("Saiga Antelope", extinct_animals)
+
 # 5. We just found out that the Passenger Pigeon is actually not extinct!
 # Remove them from extinct_animals and return the key value pair as a two item array.
 # Find the built-in method that helps you accomplish this in the Ruby documentation
