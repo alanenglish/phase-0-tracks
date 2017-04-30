@@ -111,6 +111,10 @@ p extinct_prior(extinct_animals)
 # Do not use any special built-in methods.
 # ----
 
+extinct_animals.each {|animal, year| extinct_animals[animal] = year-3}
+
+p extinct_animals
+
 # 4. You've heard that the following animals might be extinct, but you're not sure.
 # Check if they're included in extinct_animals, one by one:
 # "Andean Cat"
