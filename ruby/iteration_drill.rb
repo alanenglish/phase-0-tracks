@@ -35,6 +35,13 @@ p alpha_sort_method(zombie_apocalypse_supplies)
 # For instance: are boots in your list of supplies?
 # ----
 
+def search_array(arr, string)
+  arr.each do |item|
+    return true if item == string
+  end
+  false
+end
+
 # 4. You can't carry too many things, you've only got room in your pack for 5.
 # Remove items in your zombie_apocalypse_supplies in any way you'd like,
 # leaving only 5. Do not use any special built-in methods.
