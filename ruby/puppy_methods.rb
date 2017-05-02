@@ -26,7 +26,7 @@ class Puppy
   end
 end
 
-Driver Code
+# DRIVER CODE
 
 fido = Puppy.new
 
