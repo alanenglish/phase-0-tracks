@@ -26,7 +26,7 @@ class Puppy
   end
 end
 
-# Driver Code
+Driver Code
 
 fido = Puppy.new
 
@@ -42,3 +42,40 @@ p fido.dog_years(5)
 
 fido.puppy_sit
 
+class Kittens
+
+  def initialize
+    puts "Initializing new kittens instance..."
+  end
+
+  def lounge(location)
+    puts "The kitten is lounging on the #{location}!"
+  end
+
+  def catch_mice(n)
+    n.times { |mouse_num| puts "The kitten has caught mouse number #{mouse_num+1}."}
+  end
+
+end
+
+kitty = Kittens.new
+
+kitty.catch_mice(5)
+
+kitty.lounge("window sill")
+
+counter = 1
+kitten_array = []
+loop do 
+  if counter <= 50
+    kitten_array << Kittens.new
+    counter += 1
+  else
+    break
+  end
+end
+
+kitten_array.each do |kitten|
+  kitten.lounge("couch")
+  kitten.catch_mice(1)
+end
