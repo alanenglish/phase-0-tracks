@@ -23,7 +23,7 @@ end
   # Else list[item] and set optional_quantity with assignment operator
 # Output: Return hash with updated items/quantities
 
-def add_to_list(grocery_list, item_name, optional_quantity=1)
+def add_to_list(new_list, item_name, optional_quantity=1)
   if grocery_list.has_key?(item_name)
     grocery_list[item_name] += optional_quantity
   else
@@ -71,20 +71,41 @@ def print_pretty_list(grocery_list)
   puts "-" * 10
 end
 
+
+### RELEASE 4 - REFLECT
+# I learned that pseudocode is super important, and while it may take a bit 
+# write it all out, it certainly helps when you go to implement your actual code.
+# Arrays are typically used for a list, however in this case we used a hash, since
+# they are used to store a key and a value pair..grocery item and quantity. I suppose
+# a trade off would be that we had to take a string, change it into an array, and then
+# into a hash.
+# A method returns your data type, in our case a hash. 
+# You can pass in an array, hash, variable, other methods
+# Information can be passed between methods thru parameters
+# I think using data structures, iteration and just defining methods in general
+# were all solidified - still a bit confused on passing information between methods
+# using parameters. 
+
 # TEST CODE
 
-# create_a_list("carrots apples cereal pizza")
+# CREATE A NEW LIST 
+create_a_list("Lemonade")
 
-# new_list = {
-#   "Lemonade" => 2,
-#   "Tomatoes" => 3,
-#   "Onions" => 1,
-#   "Ice Cream" => 4,
-#   "Chips" => 8
-# }
+# ADD ITEMS TO LIST
+new_list = {
+  "Lemonade" => 2,
+  "Tomatoes" => 3,
+  "Onions" => 1,
+  "Ice Cream" => 4
+}
 
-# remove_from_list(new_list, "Lemonade")
+# REMOVE THE LEMONADE FROM ITEMS
+remove_from_list(new_list, "Lemonade")
 
-# update_quantity(new_list, "Ice Cream", 1)
+# UPDATE ICE CREAM QUANTITY TO 1
+update_quantity(new_list, "Ice Cream", 1)
 
-# print_pretty_list(new_list)
+# PRINT LIST
+print_pretty_list(new_list)
+
+
