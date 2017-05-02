@@ -42,19 +42,20 @@ end
 
 # encrypt("Felicia Torres")
 # Create database for user entries
-encrypted_database = []
+encrypted_database = {}
 # Loop until user enters "quit"
 loop do
   puts "Please enter an agents name to retrieve their secret alias. (please type 'quit' to exit)."
-  name = gets.chomp
-    if name == "quit"
+  input_name = gets.chomp
+    if input_name == "quit"
       break
     else
-        name = name.split(" ").each {|name| name.capitalize!}.join(" ")
-        encrypted_database << {"Real Name" => name, "Encrypted Name" => encrypt(name)}
+        input_name = input_name.split(" ").each {|input| input.capitalize!}.join(" ")
+        encrypted_database[input_name] = encrypt(input_name)
     end
 end
 # Print list of results
 puts "Here is a list of all DBC Agents and their secret alias - keep this hidden and safe!"
-p encrypted_database
-
+encrypted_database.each do |real_name, new_alias|
+  puts "#{real_name} is now known as #{new_alias}."
+end
