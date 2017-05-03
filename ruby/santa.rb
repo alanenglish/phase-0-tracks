@@ -16,23 +16,59 @@ class Santa
     puts "That was a good #{cookie_type} cookie!"
   end
 
+   def celebrate_birthday
+    @age += 1
+  end
+
+  def get_mad_at(reindeer_name)
+    @reindeer_ranking.insert(-1, @reindeer_ranking.delete(reindeer_name))
+  end
+
+  def reindeer_ranking
+    @reindeer_ranking
+  end
+
+  def gender=(new_gender)
+    @gender = new_gender
+  end
+
+  def age
+    @age
+  end
+
+  def ethnicity
+    @ethnicity
+  end
+
 end
 
 # DRIVE CODE
-# nicholas = Santa.new("white walker", "dire wolf")
+nicholas = Santa.new("white walker", "dire wolf")
+
+p nicholas.reindeer_ranking
+
+p nicholas.get_mad_at("Cupid")
+
+p nicholas.gender=("john snow")
+
+nicholas.celebrate_birthday
+
+p nicholas.age
+
+p nicholas.ethnicity
 
 # nicholas.speak
 
 # nicholas.eat_milk_and_cookies("Chocolate Chip")
 
-santas = []
+# santas = []
 
-example_genders = ["male", "female", "white walker", "agender", "bigender", "mermaid"]
-example_ethnicities = ["black", "white", "latino", "asian", "alien", "dire wolf"]
+# example_genders = ["male", "female", "white walker", "agender", "bigender", "mermaid"]
+# example_ethnicities = ["black", "white", "latino", "asian", "alien", "dire wolf"]
 
-example_genders.length.times do |i|
-  santas << Santa.new(example_genders[i], example_ethnicities[i])
-end
+# example_genders.length.times do |i|
+#   santas << Santa.new(example_genders[i], example_ethnicities[i])
+# end
 
 
 
