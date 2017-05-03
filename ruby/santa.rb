@@ -29,22 +29,15 @@ class Santa
 end
 
 # DRIVE CODE
+
 p nicholas = Santa.new("white walker", "dire wolf")
-
 # p nicholas.reindeer_ranking
-
 # p nicholas.get_mad_at("Cupid")
-
 # p nicholas.gender=("john snow")
-
 # nicholas.celebrate_birthday
-
 # p nicholas.age
-
 # p nicholas.ethnicity
-
 # nicholas.speak
-
 # nicholas.eat_milk_and_cookies("Chocolate Chip")
 
 santas = []
@@ -57,6 +50,7 @@ example_ethnicities = ["black", "white", "latino", "asian", "alien", "dire wolf"
 # end
 
 # CREATE LOOP TO MASS PRODUCE DIVERSE SANTAS
+
 counter = 0
 until counter == 20
   santas << Santa.new(example_genders.sample, example_ethnicities.sample)
@@ -64,6 +58,7 @@ until counter == 20
 end
 
 # ITERATE THRU ARRAY DATA STRUCTURE AND PRINT SANTA ATTRIBUTES
+
 santas.each_with_index do |santa, index|
   puts "Santa instance number: #{index+1}" 
   puts "Age: #{santa.age}"
@@ -71,9 +66,3 @@ santas.each_with_index do |santa, index|
   puts "Ethnicity: #{santa.ethnicity}"
   puts "Favorite Rides: #{santa.reindeer_ranking}"
 end
-
-
-
-
-
-
