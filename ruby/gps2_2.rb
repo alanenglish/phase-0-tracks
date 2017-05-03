@@ -13,6 +13,7 @@ def create_a_list(str)
     grocery_list[grocery_item] = 1
   end
   print_pretty_list(grocery_list)
+  grocery_list
 end
 
 # Def method to add an item to our grocery list
@@ -23,7 +24,7 @@ end
   # Else list[item] and set optional_quantity with assignment operator
 # Output: Return hash with updated items/quantities
 
-def add_to_list(new_list, item_name, optional_quantity=1)
+def add_to_list(grocery_list, item_name, optional_quantity=1)
   if grocery_list.has_key?(item_name)
     grocery_list[item_name] += optional_quantity
   else
@@ -86,18 +87,16 @@ end
 # were all solidified - still a bit confused on passing information between methods
 # using parameters. 
 
-# TEST CODE
-
+# DRIVER CODE
 # CREATE A NEW LIST 
-create_a_list("Lemonade")
+new_list = create_a_list("Milk")
 
 # ADD ITEMS TO LIST
-new_list = {
-  "Lemonade" => 2,
-  "Tomatoes" => 3,
-  "Onions" => 1,
-  "Ice Cream" => 4
-}
+add_to_list(new_list, "Lemonade", 2)
+add_to_list(new_list, "Tomatoes", 3)
+add_to_list(new_list, "Onions", 1)
+add_to_list(new_list, "Ice Cream", 4)
+
 
 # REMOVE THE LEMONADE FROM ITEMS
 remove_from_list(new_list, "Lemonade")
