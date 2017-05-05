@@ -14,12 +14,16 @@
 # - congratulate user if wins, or taunt if loses
 
 class WordGame
-  attr_accessor :word, :guess_count, :letters_guessed
+  attr_accessor :word, :guess_count, :letters_guessed, :correct_guess
 
   def initialize(string)
     @word = string.split("")
     @guess_count = 0
     @letters_guessed = [nil]
+  end
+
+  def max_guesses_allowed
+    @guess_count = @word.length
   end
 
 end
