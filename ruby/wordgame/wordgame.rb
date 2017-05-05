@@ -19,15 +19,32 @@ class WordGame
   def initialize(string)
     @word = string.split("")
     @guess_count = 0
-    @letters_guessed = [nil]
+    @letters_guessed = []
   end
 
   def max_guesses_allowed
     @guess_count = @word.length
   end
 
+  def check_letter(letter)
+    if @word.include?(letter)
+      @letters_guessed << letter
+      @correct_guess = true
+    else
+      @letters_guessed << letter
+      @correct_guess = false
+    end
+  end
+
+  def guesses_made
+    @letters_guessed
+  end
+
 end
 
 
+# word = WordGame.new("hello")
+# word.check_letter("h")
+# p word.guesses_made
 
 
