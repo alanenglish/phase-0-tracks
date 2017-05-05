@@ -40,6 +40,10 @@ class WordGame
     @letters_guessed
   end
 
+  def decrease_guess_count
+    @guess_count -= 1
+  end
+
 end
 
 
