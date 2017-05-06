@@ -83,7 +83,7 @@ word.repeated_letter?(user_letter)
 puts "Vanna, please show #{user_name.capitalize} their progress: #{word.progress_update.upcase}"
 puts "You currently have #{word.guess_count} guesses remaining!" if !word.win
 puts "Congratulations #{user_name.capitalize}! You guessed '#{user_word}' correctly!" if word.win
-puts "You have lost the game. Shame on you and your entire family!" if word.guess_count == 0
+puts "I'm sorry, you have lost the WordGame! Better luck next time - but I doubt it!" if word.guess_count == 0
 end 
 
 
