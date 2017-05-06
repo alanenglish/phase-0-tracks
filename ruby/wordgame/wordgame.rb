@@ -14,41 +14,61 @@
 # - congratulate user if wins, or taunt if loses
 
 class WordGame
-  attr_accessor :word, :guess_count, :letters_guessed, :correct_guess
+  attr_reader :guess_count, :game_over
 
   def initialize(string)
+    @answer = string
     @word = string.split("")
-    @guess_count = 0
+    @guess_count = @word.length * 2
     @letters_guessed = []
+    @word_progress = %w( _ ) * @word.length
+    @game_over = false
+  end 
+
+  def letters_to_array(letter)
+    @letters_guessed << letter
   end
 
-  def max_guesses_allowed
-    @guess_count = @word.length
+  def repeated_letter?(letter)
+    check_letter(letter) if !@letters_guessed.include?(letter)
   end
 
   def check_letter(letter)
-    if @word.include?(letter)
-      @letters_guessed << letter
-      @correct_guess = true
-    else
-      @letters_guessed << letter
-      @correct_guess = false
+    letters_to_array(letter)
+        @word.each_with_index do |char, index|
+          if char == letter
+            @word_progress[index] = char
+          end
+        end
+      @guess_count -= 1
+    letter
+  end
+
+  def progress_update
+    @word_progress.join(' ')
+  end
+
+  def win
+    if @word_progress.join('') == @answer
+    @game_over = true
     end
   end
 
-  def guesses_made
-    @letters_guessed
+  def word_guess(word)
+    if word == @word.join('') 
+      @game_over = true
+    end
   end
-
-  def decrease_guess_count
-    @guess_count -= 1
-  end
-
 end
 
 
-# word = WordGame.new("hello")
-# word.check_letter("h")
-# p word.guesses_made
+word = WordGame.new("hello")
+# p word.word_progress
+# p word.progress_update
+# p word.check_letter("h")
+# p word.check_letter("h")
+# p word.check_letter('o')
+# p word.guess_count
+# p word.letters_guessed
 
 

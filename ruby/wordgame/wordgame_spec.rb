@@ -1,14 +1,14 @@
 # RSPEC FOR WORDGAME
-
 require_relative 'wordgame'
 
 describe WordGame do
   let(:word) { WordGame.new("horse") }
 
-  it "number of guesses allowed" do
-    expect(word.max_guesses_allowed).to eq 5
+it "checks if a letter has already been used" do
+    #word.repeated_letter?('h')
+    expect(word.repeated_letter?('h').join('')).to eq 'h'
   end
-
+  
   it "guess correct letter" do
     expect(word.check_letter("h")).to be true
   end
@@ -23,14 +23,13 @@ describe WordGame do
   end
 
   it "decrease guesses remaining by one" do
-    word.max_guesses_allowed
-    expect(word.decrease_guess_count).to eq 4
+    word.check_letter("o")
+    expect(word.guess_count).to eq 9
   end
 
   it "update user on progress" do
-  end
-
-  it "accidental same guess doesn't count" do
+    word.check_letter("h")
+    expect(word.progress_update).to eq "h _ _ _ _"
   end
 
   it "won the game" do
@@ -38,5 +37,4 @@ describe WordGame do
 
   it "lost the game" do 
   end
-
 end
