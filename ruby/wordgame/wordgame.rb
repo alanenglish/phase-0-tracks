@@ -14,7 +14,7 @@
 # - congratulate user if wins, or taunt if loses
 
 class WordGame
-  attr_reader :guess_count, :game_over
+  attr_reader :guess_count, :game_over, :answer
 
   def initialize(string)
     @answer = string
@@ -62,13 +62,28 @@ class WordGame
 end
 
 
-word = WordGame.new("hello")
-# p word.word_progress
-# p word.progress_update
-# p word.check_letter("h")
-# p word.check_letter("h")
-# p word.check_letter('o')
-# p word.guess_count
-# p word.letters_guessed
+# USER INTERFACE
+
+puts "Welcome to WordGame!"
+puts "Please enter a word you would like your opponent to guess?"
+user_word = gets.chomp
+word = WordGame.new(user_word)
+puts "What is your first name?"
+user_name = gets.chomp
+
+until word.win || word.guess_count == 0 
+puts "#{user_name.capitalize}, please guess a letter!"
+user_letter = gets.chomp
+word.repeated_letter?(user_letter)
+  if user_word.include?(user_letter)
+    puts "Nice Guess!"
+  else
+    puts "Sorry, there is no #{user_letter.upcase}!"
+  end
+puts "Vanna, please show #{user_name.capitalize} their progress: #{word.progress_update.upcase}"
+puts "You currently have #{word.guess_count} guesses remaining!" if !word.win
+puts "Congratulations #{user_name.capitalize}! You guessed '#{user_word}' correctly!" if word.win
+puts "You have lost the game. Shame on you and your entire family!" if word.guess_count == 0
+end 
 
 
