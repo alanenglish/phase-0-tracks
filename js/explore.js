@@ -18,3 +18,7 @@ var newVariable = reverse("Alan")
 
 console.log(newVariable)
 
+if (newVariable == "nalA") {
+  console.log(newVariable);
+}
+
