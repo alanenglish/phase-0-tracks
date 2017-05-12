@@ -12,5 +12,9 @@ function reverse(string) {
   return stringReverse
 }
 
-console.log(reverse("hello"))
+// console.log(reverse("hello"))
+
+var newVariable = reverse("Alan")
+
+console.log(newVariable)
 
