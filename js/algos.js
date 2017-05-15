@@ -31,22 +31,54 @@ function findMatch(obj1, obj2) {
   return matchFound
 }
 
+// RELEASE 2 - GENERATE RANDOM TEST DATA
+// Create a function that takes an integer as the parameter, which will be the
+// number of random words that the function will create
+// Create a variable and set equal to empty array
+// Create alphabet string, which will be used to build the random word
+// Use for loop to create as many words as equal to the length of integer parameter
+// Create a random word variable and set equal to empty string
+// Create random length variable (use search to figure this out)
+// Once random number has been selected, iterate over alphabet string and add the
+// selected letters to the random word variable
+// Push the random word variable to the array created at the top of the function
+
+function generateRandom(integer) {
+  var wordsArray = [];
+  var alphabet = "abcdefghijklmnopqrstuvwxyz";
+  for (var i = 0; i < integer; i++) {
+    var randomWord = ""
+    var randomLength = (Math.floor(Math.random() * 10) + 1);
+    for (var x = 1; x < randomLength; x++) {
+      randomWord += alphabet[Math.floor(Math.random() * alphabet.length)]
+    };
+    wordsArray.push(randomWord)
+  };
+return wordsArray
+};
+
 // DRIVER CODE - KEEP BELOW FUNCTIONS
-console.log(findMatch({name: "Steven", age: 54}, {name: "Tamir", age: 54}))
-console.log(findMatch({animal: "Dog", legs: 4}, {animal: "Dog", legs: 3}))
-// My matchFound function only works when comparing two key-value pairs it seems like
-// I will have to come back and fix this at some point.
-var doggies = {name: "Harper", age: 1}
-var kitties = {name: "Harper", age: 4}
-console.log(findMatch(doggies, kitties))
 
-var puppies = ["Harper", "Fido", "Riley"]
-var languages = ["JavaScript", "Ruby", "Python", "HTML", "CSS"]
-var comedians = ["Aziz Ansari", "Dave Chappelle", "Jerry Seinfeld", "Chris Rock"]
-console.log(longestPhrase(puppies))
-console.log(longestPhrase(languages))
-// In this example Jerry and Dave are equal length, so it returns Dave - curious 
-// as to how I would get this program to return both
-console.log(longestPhrase(comedians))
+// console.log(findMatch({name: "Steven", age: 54}, {name: "Tamir", age: 54}))
+// console.log(findMatch({animal: "Dog", legs: 4}, {animal: "Dog", legs: 3}))
+// // My matchFound function only works when comparing two key-value pairs it seems like
+// // I will have to come back and fix this at some point.
+// var doggies = {name: "Harper", age: 1}
+// var kitties = {name: "Harper", age: 4}
+// console.log(findMatch(doggies, kitties))
 
+// var puppies = ["Harper", "Fido", "Riley"]
+// var languages = ["JavaScript", "Ruby", "Python", "HTML", "CSS"]
+// var comedians = ["Aziz Ansari", "Dave Chappelle", "Jerry Seinfeld", "Chris Rock"]
+// console.log(longestPhrase(puppies))
+// console.log(longestPhrase(languages))
+// // In this example Jerry and Dave are equal length, so it returns Dave - curious 
+// // as to how I would get this program to return both
+// console.log(longestPhrase(comedians))
 
+// console.log(generateRandom(3))
+for (var n = 0; n < 10; n++) {
+  var driverCode = generateRandom(3);
+  console.log(driverCode);
+  console.log(longestPhrase(driverCode));
+};
