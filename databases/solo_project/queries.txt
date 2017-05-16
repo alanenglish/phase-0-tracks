@@ -200,7 +200,7 @@ RESULT:
 
 
 4. Display a narrower selection of columns (fewer columns than all of them, in other words) from both tables using one query.
-COMMAND:
+COMMAND (to see artist, my interest, venue and day performing:
 SELECT artists.artist, artists.interest, stages.stage, days.day FROM artists JOIN stages ON artists.stage_id = stages.id JOIN days ON artists.day_id = days.id;
 
 RESULT:
@@ -385,5 +385,274 @@ sqlite> SELECT * FROM artists;
 88|The Shins|False|4|8
 89|TOVE LO|True|4|8
 90|Maggie Rogers|False|4|8
+
+RELEASE 3 - RESEARCH ON YOUR OWN
+COMMAND (to only see artist and venue):
+SELECT artists.artist, stages.stage FROM artists JOIN stages ON artists.stage_id = stages.id;
+
+RESULT:
+Migos|Bud Light
+Wiz Khalifa|Bud Light
+Lorde|Bud Light
+Capital Cities|Tito's Handmade Vodka
+Pham|Tito's Handmade Vodka
+Lil Uzi Vert|Pepsi
+Oliver Tree|Pepsi
+Michael Blume|BMI
+Cheat Codes|Perry's
+Spoon|Lake Shore
+Muse|Grant Park
+Tegan and Sara|Bud Light
+Foster the People|Bud Light
+Blink 182|Bud Light
+Ryan Adams|Tito's Handmade Vodka
+Moksi|Tito's Handmade Vodka
+Bishop Briggs|Pepsi
+Majid Jordan|Pepsi
+Crystal Castles|Pepsi
+Slothrust|BMI
+Cobi|BMI
+Frenship|BMI
+3LAU|Perry's
+Gramatik|Perry's
+DJ Snake|Perry's
+Little Dragon|Lake Shore
+The Pretty Reckless|Lake Shore
+Jidenna|Grant Park
+Plantogram|Grant Park
+The Killers|Grant Park
+Vance Joy|Bud Light
+The Head and the Heart|Bud Light
+The xx|Bud Light
+Jacob Banks|Tito's Handmade Vodka
+Wingtip|Tito's Handmade Vodka
+LIVE|Tito's Handmade Vodka
+Jai Wolf|Pepsi
+Mac DeMarco|Pepsi
+Sylvan Esso|Pepsi
+Russ|Pepsi
+888|BMI
+Ron Gallo|BMI
+Colony House|BMI
+Nathan Scott|Perry's
+Ephwurd|Perry's
+Alison Wonderland|Perry's
+21 Savage|Perry's
+KASKADE|Perry's
+San Fermin|Lake Shore
+Zara Larsson|Lake Shore
+Royal Blood|Lake Shore
+Banks|Lake Shore
+CHANCE THE RAPPER|Grant Park
+alt-J|Grant Park
+Glass Animals|Grant Park
+Warpaint|Grant Park
+Barns Courtney|Bud Light
+Car Set Headrest|Bud Light
+Milky Chance|Bud Light
+Big Sean|Bud Light
+Lil Yachty|Tito's Handmade Vodka
+Whethan|Tito's Handmade Vodka
+Joseph|Tito's Handmade Vodka
+Lo Moon|Pepsi
+Noname|Pepsi
+Sampha|Pepsi
+6LACK|Pepsi
+Joey Bada$$|Pepsi
+Rae Sremmurd|Pepsi
+Duckwrth|BMI
+Spencer Ludwig|BMI
+flor|BMI
+Sofi Tukker|BMI
+Boogie T|Perry's
+JOYRYDE|Perry's
+Slander|Perry's
+Machine Gun Kelly|Lake Shore
+Charli XCX|Lake Shore
+London Grammar|Lake Shore
+GROUPLOVE|Lake Shore
+Arcade Fire|Grant Park
+The Shins|Grant Park
+TOVE LO|Grant Park
+Maggie Rogers|Grant Park
+
+COMMAND (to see artist and day performing):
+SELECT artists.artist, days.day FROM artists JOIN days ON artists.day_id = days.id;
+
+RESULT:
+Migos|Thursday
+Wiz Khalifa|Thursday
+Lorde|Thursday
+Capital Cities|Thursday
+Pham|Thursday
+Lil Uzi Vert|Thursday
+Oliver Tree|Thursday
+Michael Blume|Thursday
+Cheat Codes|Thursday
+Spoon|Thursday
+Muse|Thursday
+Tegan and Sara|Friday
+Foster the People|Friday
+Blink 182|Friday
+Ryan Adams|Friday
+Moksi|Friday
+Bishop Briggs|Friday
+Majid Jordan|Friday
+Crystal Castles|Friday
+Slothrust|Friday
+Cobi|Friday
+Frenship|Friday
+3LAU|Friday
+Gramatik|Friday
+DJ Snake|Friday
+Little Dragon|Friday
+The Pretty Reckless|Friday
+Jidenna|Friday
+Plantogram|Friday
+The Killers|Friday
+Vance Joy|Saturday
+The Head and the Heart|Saturday
+The xx|Saturday
+Jacob Banks|Saturday
+Wingtip|Saturday
+LIVE|Saturday
+Jai Wolf|Saturday
+Mac DeMarco|Saturday
+Sylvan Esso|Saturday
+Russ|Saturday
+888|Saturday
+Ron Gallo|Saturday
+Colony House|Saturday
+Nathan Scott|Saturday
+Ephwurd|Saturday
+Alison Wonderland|Saturday
+21 Savage|Saturday
+KASKADE|Saturday
+San Fermin|Saturday
+Zara Larsson|Saturday
+Royal Blood|Saturday
+Banks|Saturday
+CHANCE THE RAPPER|Saturday
+alt-J|Saturday
+Glass Animals|Saturday
+Warpaint|Saturday
+Barns Courtney|Sunday
+Car Set Headrest|Sunday
+Milky Chance|Sunday
+Big Sean|Sunday
+Lil Yachty|Sunday
+Whethan|Sunday
+Joseph|Sunday
+Lo Moon|Sunday
+Noname|Sunday
+Sampha|Sunday
+6LACK|Sunday
+Joey Bada$$|Sunday
+Rae Sremmurd|Sunday
+Duckwrth|Sunday
+Spencer Ludwig|Sunday
+flor|Sunday
+Sofi Tukker|Sunday
+Boogie T|Sunday
+JOYRYDE|Sunday
+Slander|Sunday
+Machine Gun Kelly|Sunday
+Charli XCX|Sunday
+London Grammar|Sunday
+GROUPLOVE|Sunday
+Arcade Fire|Sunday
+The Shins|Sunday
+TOVE LO|Sunday
+Maggie Rogers|Sunday
+
+COMMAND (to see artist, venue, day performing):
+SELECT artists.artist, stages.stage, days.day FROM artists JOIN stages ON artists.stage_id = stages.id JOIN days ON artists.day_id = days.id;
+
+RESULT:
+Migos|Bud Light|Thursday
+Wiz Khalifa|Bud Light|Thursday
+Lorde|Bud Light|Thursday
+Capital Cities|Tito's Handmade Vodka|Thursday
+Pham|Tito's Handmade Vodka|Thursday
+Lil Uzi Vert|Pepsi|Thursday
+Oliver Tree|Pepsi|Thursday
+Michael Blume|BMI|Thursday
+Cheat Codes|Perry's|Thursday
+Spoon|Lake Shore|Thursday
+Muse|Grant Park|Thursday
+Tegan and Sara|Bud Light|Friday
+Foster the People|Bud Light|Friday
+Blink 182|Bud Light|Friday
+Ryan Adams|Tito's Handmade Vodka|Friday
+Moksi|Tito's Handmade Vodka|Friday
+Bishop Briggs|Pepsi|Friday
+Majid Jordan|Pepsi|Friday
+Crystal Castles|Pepsi|Friday
+Slothrust|BMI|Friday
+Cobi|BMI|Friday
+Frenship|BMI|Friday
+3LAU|Perry's|Friday
+Gramatik|Perry's|Friday
+DJ Snake|Perry's|Friday
+Little Dragon|Lake Shore|Friday
+The Pretty Reckless|Lake Shore|Friday
+Jidenna|Grant Park|Friday
+Plantogram|Grant Park|Friday
+The Killers|Grant Park|Friday
+Vance Joy|Bud Light|Saturday
+The Head and the Heart|Bud Light|Saturday
+The xx|Bud Light|Saturday
+Jacob Banks|Tito's Handmade Vodka|Saturday
+Wingtip|Tito's Handmade Vodka|Saturday
+LIVE|Tito's Handmade Vodka|Saturday
+Jai Wolf|Pepsi|Saturday
+Mac DeMarco|Pepsi|Saturday
+Sylvan Esso|Pepsi|Saturday
+Russ|Pepsi|Saturday
+888|BMI|Saturday
+Ron Gallo|BMI|Saturday
+Colony House|BMI|Saturday
+Nathan Scott|Perry's|Saturday
+Ephwurd|Perry's|Saturday
+Alison Wonderland|Perry's|Saturday
+21 Savage|Perry's|Saturday
+KASKADE|Perry's|Saturday
+San Fermin|Lake Shore|Saturday
+Zara Larsson|Lake Shore|Saturday
+Royal Blood|Lake Shore|Saturday
+Banks|Lake Shore|Saturday
+CHANCE THE RAPPER|Grant Park|Saturday
+alt-J|Grant Park|Saturday
+Glass Animals|Grant Park|Saturday
+Warpaint|Grant Park|Saturday
+Barns Courtney|Bud Light|Sunday
+Car Set Headrest|Bud Light|Sunday
+Milky Chance|Bud Light|Sunday
+Big Sean|Bud Light|Sunday
+Lil Yachty|Tito's Handmade Vodka|Sunday
+Whethan|Tito's Handmade Vodka|Sunday
+Joseph|Tito's Handmade Vodka|Sunday
+Lo Moon|Pepsi|Sunday
+Noname|Pepsi|Sunday
+Sampha|Pepsi|Sunday
+6LACK|Pepsi|Sunday
+Joey Bada$$|Pepsi|Sunday
+Rae Sremmurd|Pepsi|Sunday
+Duckwrth|BMI|Sunday
+Spencer Ludwig|BMI|Sunday
+flor|BMI|Sunday
+Sofi Tukker|BMI|Sunday
+Boogie T|Perry's|Sunday
+JOYRYDE|Perry's|Sunday
+Slander|Perry's|Sunday
+Machine Gun Kelly|Lake Shore|Sunday
+Charli XCX|Lake Shore|Sunday
+London Grammar|Lake Shore|Sunday
+GROUPLOVE|Lake Shore|Sunday
+Arcade Fire|Grant Park|Sunday
+The Shins|Grant Park|Sunday
+TOVE LO|Grant Park|Sunday
+Maggie Rogers|Grant Park|Sunday
+
 
 
