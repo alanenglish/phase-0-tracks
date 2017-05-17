@@ -1,4 +1,4 @@
-// 1. Display the information in one table (either table is fine).
+1. Display the information in one table (either table is fine).
 COMMAND:
 SELECT * FROM lolla;
 
