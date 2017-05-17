@@ -1,0 +1,40 @@
+2. You've joined two tables before. How do you join three?
+COMMAND:
+SELECT * FROM reviews, users, businesses WHERE reviews.user_id = users.id AND reviews.business_id = businesses.id;
+
+RESULT:
+1|5|Angela looked beautiful!|1|1|1|Bradford|Pitt|1|Grundy Hollow Wedding Chapel
+2|3|Could use a few more poodles|3|7|7|Denzel|George|3|The Beagle Nightclub
+3|2|They towed my damn car. I was in it|2|2|2|Mandy|Kaling|2|Amir's Towing
+4|5|Great workout! Lol|4|3|3|Angela|Jolie|4|Lotus Yoga
+5|5|Took a huge dump. Thought my life was over. But Janet did it!|5|6|6|Merryl|Streepman|5|Plumbing by Janet
+6|2|Sushi World? More like sushi hurl|6|4|4|Steven|Wonder|6|Sushi World
+7|1|You spelled sports wrong. It's an 's'|7|5|5|Holly|Berry|7|JoeBob's Sportz Barn
+
+3. There are some repetitive columns if we choose to view all fields. Choose instead to just view the user's names, the business name, the star rating, and the comment.
+COMMAND:
+SELECT users.first_name, users.last_name, businesses.name, reviews.stars, reviews.comment FROM reviews JOIN businesses ON reviews.business_id = businesses.id JOIN users ON reviews.user_id = users.id;
+
+RESULT:
+Bradford|Pitt|Grundy Hollow Wedding Chapel|5|Angela looked beautiful!
+Denzel|George|The Beagle Nightclub|3|Could use a few more poodles
+Mandy|Kaling|Amir's Towing|2|They towed my damn car. I was in it
+Angela|Jolie|Lotus Yoga|5|Great workout! Lol
+Merryl|Streepman|Plumbing by Janet|5|Took a huge dump. Thought my life was over. But Janet did it!
+Steven|Wonder|Sushi World|2|Sushi World? More like sushi hurl
+Holly|Berry|JoeBob's Sportz Barn|1|You spelled sports wrong. It's an 's'
+
+4. How do you view the data of all three tables for just one particular business?
+COMMAND:
+SELECT users.first_name, users.last_name, businesses.name, reviews.stars, reviews.comment FROM reviews JOIN businesses ON reviews.business_id = businesses.id JOIN users ON reviews.user_id = users.id WHERE business_id=1;
+
+RESULT:
+Bradford|Pitt|Grundy Hollow Wedding Chapel|5|Angela looked beautiful!
+
+OR;
+
+COMMAND:
+SELECT * FROM reviews, users, businesses WHERE reviews.user_id = users.id AND reviews.business_id = businesses.id AND business_id=1;
+
+RESULT:
+1|5|Angela looked beautiful!|1|1|1|Bradford|Pitt|1|Grundy Hollow Wedding Chapel
