@@ -654,5 +654,94 @@ The Shins|Grant Park|Sunday
 TOVE LO|Grant Park|Sunday
 Maggie Rogers|Grant Park|Sunday
 
+COMMAND (INNER JOIN):
+SELECT artists.artist, artists.day_id, stages.stage FROM artists INNER JOIN stages ON artists.stage_id = stages.id;
+
+RESULT:
+Migos|1|Bud Light
+Wiz Khalifa|1|Bud Light
+Lorde|1|Bud Light
+Capital Cities|1|Tito's Handmade Vodka
+Pham|1|Tito's Handmade Vodka
+Lil Uzi Vert|1|Pepsi
+Oliver Tree|1|Pepsi
+Michael Blume|1|BMI
+Cheat Codes|1|Perry's
+Spoon|1|Lake Shore
+Muse|1|Grant Park
+Tegan and Sara|2|Bud Light
+Foster the People|2|Bud Light
+Blink 182|2|Bud Light
+Ryan Adams|2|Tito's Handmade Vodka
+Moksi|2|Tito's Handmade Vodka
+Bishop Briggs|2|Pepsi
+Majid Jordan|2|Pepsi
+Crystal Castles|2|Pepsi
+Slothrust|2|BMI
+Cobi|2|BMI
+Frenship|2|BMI
+3LAU|2|Perry's
+Gramatik|2|Perry's
+DJ Snake|2|Perry's
+Little Dragon|2|Lake Shore
+The Pretty Reckless|2|Lake Shore
+Jidenna|2|Grant Park
+Plantogram|2|Grant Park
+The Killers|2|Grant Park
+Vance Joy|3|Bud Light
+The Head and the Heart|3|Bud Light
+The xx|3|Bud Light
+Jacob Banks|3|Tito's Handmade Vodka
+Wingtip|3|Tito's Handmade Vodka
+LIVE|3|Tito's Handmade Vodka
+Jai Wolf|3|Pepsi
+Mac DeMarco|3|Pepsi
+Sylvan Esso|3|Pepsi
+Russ|3|Pepsi
+888|3|BMI
+Ron Gallo|3|BMI
+Colony House|3|BMI
+Nathan Scott|3|Perry's
+Ephwurd|3|Perry's
+Alison Wonderland|3|Perry's
+21 Savage|3|Perry's
+KASKADE|3|Perry's
+San Fermin|3|Lake Shore
+Zara Larsson|3|Lake Shore
+Royal Blood|3|Lake Shore
+Banks|3|Lake Shore
+CHANCE THE RAPPER|3|Grant Park
+alt-J|3|Grant Park
+Glass Animals|3|Grant Park
+Warpaint|3|Grant Park
+Barns Courtney|4|Bud Light
+Car Set Headrest|4|Bud Light
+Milky Chance|4|Bud Light
+Big Sean|4|Bud Light
+Lil Yachty|4|Tito's Handmade Vodka
+Whethan|4|Tito's Handmade Vodka
+Joseph|4|Tito's Handmade Vodka
+Lo Moon|4|Pepsi
+Noname|4|Pepsi
+Sampha|4|Pepsi
+6LACK|4|Pepsi
+Joey Bada$$|4|Pepsi
+Rae Sremmurd|4|Pepsi
+Duckwrth|4|BMI
+Spencer Ludwig|4|BMI
+flor|4|BMI
+Sofi Tukker|4|BMI
+Boogie T|4|Perry's
+JOYRYDE|4|Perry's
+Slander|4|Perry's
+Machine Gun Kelly|4|Lake Shore
+Charli XCX|4|Lake Shore
+London Grammar|4|Lake Shore
+GROUPLOVE|4|Lake Shore
+Arcade Fire|4|Grant Park
+The Shins|4|Grant Park
+TOVE LO|4|Grant Park
+Maggie Rogers|4|Grant Park
+
 
 
