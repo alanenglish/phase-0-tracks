@@ -5,3 +5,8 @@ STARTUPS = [
 VC = [
   ["Accel Partners", 600000000, 1983], ["LOWERCASE CAPITAL", 35000000, 2010], ["Sequoia Capital", 4000000000, 1972], ["Lightspeed Venture Partners", 2000000000, 1971], ["Kleiner, Perkins, Caufield & Byers", 1500000000, 1972], ["Khosla Ventures", 1300000000, 2004], ["Insight Venture Partners", 7600000000, 1995], ["Intel Capital", 9800000000, 1991], ["Google Ventures", 1600000000, 2009], ["Benchmark Capital", 2300000000, 1995], ["Y Combinator", 700000000, 2005], ["Greylock Partners", 3100000000, 1965], ["Menlo Ventures", 2700000000, 1976], ["Draper Fisher Jurvetson", 4000000000, 1985], ["Index Ventures", 5800000000, 1996], ["Charles River Ventures", 1400000000, 1970], ["Atlas Venture", 1800000000, 1980], ["Goldman Sachs", 8000000000, 1869], ["Battery Ventures", 5500000000, 1983], ["Bessemer Venture Partners", 3500000000, 1911], ["Mayfield Fund", 2400000000, 1969], ["IDG Ventures", 6800000000, 1995], ["Granite Ventures", 1000000000, 1992], ["The Founders Fund", 1000000000, 2005], ["Fidelity Ventures", 1500000000, 1970], ["Elevation Partners", 1900000000, 2004], ["Crosslink Capital", 1800000000, 1999], ["Balderton Capital", 2300000000, 2007], ["Bain Capital", 1400000000, 1984], ["Austin Ventures", 3900000000, 1979], ["3i", 16500000000, 1945]
 ]
+
+INVESTMENTS = [
+  []
+
+]

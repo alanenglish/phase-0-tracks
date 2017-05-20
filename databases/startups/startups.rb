@@ -54,7 +54,6 @@ def shutdown_startup(database, company)
   database.execute("DELETE FROM startups WHERE company=(?)", [company])
 end
 
-
 # VENTURE CAPITALIST METHODS
 
 def create_vc(database, firm, funds_managed, established)
