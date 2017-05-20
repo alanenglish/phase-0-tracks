@@ -35,6 +35,19 @@ CREATE TABLE IF NOT EXISTS investments (
   );
 SQL
 
-db.execute(startup_table)
-db.execute(vc_table)
-db.execute(investments_table)
+# db.execute(startup_table)
+# db.execute(vc_table)
+# db.execute(investments_table)
+
+def create_startup(database, company, total_raised, category, city, founded)
+  database.execute("INSERT INTO startups (company, total_raised, category, city, founded) VALUES (?, ?, ?, ?, ?)", [company, total_raised, category, city, founded])
+end
+
+def create_vc(database, firm, funds_managed, established)
+  database.execute("INSERT INTO venture_capitalists (firm, funds_managed, established) VALUES (?, ?, ?)", [firm, funds_managed, established])
+end
+
+def create_investments(database, amount_funded, year_made, startup_id, vc_id)
+  database.execute("INSERT INTO investments (amount_funded, year_made, startup_id, vc_id) VALUES (?, ?, ?, ?)", [amount_funded, year_made, startup_id, vc_id])
+end
+
