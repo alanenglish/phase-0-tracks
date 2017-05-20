@@ -80,6 +80,7 @@ end
 
 ### CREATE VENTURE CAPITALISTS ###
 # create_vc(db, "Andreessen Horowitz", 950000000, 2009)
+# create_vc(db, "Hooli Ventures", 4000000000, 2000)
 
 # VC.each do |item|
 #   create_vc(db, item[0], item[1], item[2])
@@ -87,8 +88,9 @@ end
 
 
 ### CREATE INVESTMENTS ###
-# make_investment(db, 9000000, 2014, 1, 1)
+# make_investment(db, 20000000, 2014, 1, 1)
 
-
-
+INVESTMENTS.each do |item|
+  make_investment(db, item[0], item[1], item[2], item[3])
+end
 
