@@ -1,6 +1,6 @@
 require 'sqlite3'
 require 'colorize'
-require_relative 'data.rb'
+require_relative 'data'
 
 db = SQLite3::Database.new("startups_vc.db")
 
@@ -57,6 +57,14 @@ end
 
 def find_startup_id(database, company)
   database.execute("SELECT startups.id FROM startups WHERE company=(?)", [company])
+end
+
+def find_startup_name(database, startup_id)
+  database.execute("SELECT startups.company FROM startups WHERE id=(?)", [startup_id])
+end
+
+def find_total_raised(database, company)
+  database.execute("SELECT startups.total_raised FROM startups WHERE company=(?)", [company])  
 end
 
 def print_startup_list(database)
@@ -127,6 +135,10 @@ end
 
 def make_investment(database, amount_funded, year_made, startup_id, vc_id)
   database.execute("INSERT INTO investments (amount_funded, year_made, startup_id, vc_id) VALUES (?, ?, ?, ?)", [amount_funded, year_made, startup_id, vc_id])
+  startup_name = find_startup_name(database, startup_id)
+  total_raised = find_total_raised(database, startup_name)
+  new_value = total_raised[0][0] + amount_funded
+  update_startup(database, startup_name, "total_raised", new_value)
 end
 
 def sum_of_investments(database, startup_id)
@@ -169,14 +181,12 @@ def print_investment_made(database, firm, company)
     end
 end
 
-
 ### CREATE STARTUPS ###
 # create_startup(db, "Instacart", 0, "Food Tech", "San Francisco", 2012)
 
 # STARTUPS.each do |item|
 #    create_startup(db, item[0], item[1], item[2], item[3], item[4])
 # end
-
 
 ### CREATE VENTURE CAPITAL FIRM ###
 # create_vc(db, "Andreessen Horowitz", 950000000, 2009)
@@ -186,9 +196,8 @@ end
 #   create_vc(db, item[0], item[1], item[2])
 # end
 
-
 ### CREATE INVESTMENTS ###
-# make_investment(db, 20000000, 2014, 1, 1)
+# make_investment(db, 30000000, 2014, 36, 33)
 
 # INVESTMENTS.each do |item|
 #   make_investment(db, item[0], item[1], item[2], item[3])
