@@ -82,7 +82,7 @@ end
 
 def print_specific_startup(database, company)
   specific_startup = database.execute("SELECT * FROM startups WHERE company=(?)", [company])
-  puts '*'.colorize(:red) * 30
+    puts '*'.colorize(:red) * 30
     specific_startup.map do |item|
       puts "Company: #{item[1]}"
       puts "Total Funding: $#{item[2]}".to_s.reverse.gsub(%r{([0-9]{3}(?=([0-9])))}, "\\1,").reverse
@@ -159,7 +159,7 @@ end
 
 def specific_startup_investments(database, company)
   specific_startup = database.execute("SELECT venture_capitalists.firm, startups.company, investments.amount_funded, investments.year_made FROM investments JOIN venture_capitalists ON investments.vc_id = venture_capitalists.id JOIN startups ON investments.startup_id = startups.id WHERE company=(?)", [company]);
-  puts '*'.colorize(:red) * 30
+    puts '*'.colorize(:red) * 30
     specific_startup.map do |item|
       puts "VC Firm: #{item[0]}"
       puts "Startup Company: #{item[1]}"
@@ -171,7 +171,7 @@ end
 
 def print_investment_made(database, firm, company)
   investment_made = database.execute("SELECT venture_capitalists.firm, startups.company, investments.amount_funded, investments.year_made FROM investments JOIN venture_capitalists ON investments.vc_id = venture_capitalists.id JOIN startups ON investments.startup_id = startups.id WHERE company=(?) AND firm=(?)", [company, firm]);
-  puts '*'.colorize(:red) * 30
+    puts '*'.colorize(:red) * 30
     investment_made.map do |item|
       puts "VC Firm: #{item[0]}"
       puts "Startup Company: #{item[1]}"
