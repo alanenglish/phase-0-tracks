@@ -1,0 +1,12 @@
+What are some of the key design philosophies of the Linux operating system?
+
+It seems like the Linux system was designed differently than the Mac and Windows OS, relying heavily on the use of the CLI, which is much more easily accessible in Linux - and the system caters to those individuals that know what he or she is doing with the computer. Open Source Software is at the center of the Linux design philosophy. Linux can be thought of as a complete development environment.
+
+In your own words, what is a VPS (virtual private server)? What, according to your research, are the advantages of using a VPS?
+
+From watching Jen's video, I would consider a VPS as a virtual machine, designed/created specifically to act as a web server. It is essentially a blank slate computer, and any software can be installed by the root user who has access to all aspects of the virtual machine and how it is set up. I believe an advantage of hosting on a VPS is that it is cost efficient. Another big advantage would be the control the user has over the VPS, as opposed to a shared hosting service or server. VPS hosting plans are easily scalable, if you need more from your environment, you can gradually increase your hosting plan. You have the same technical support you would if you used a shared host. Semi managed and fully managed web hosting is available. VPS is environmentally friendly.
+
+Why is it considered a bad idea to run programs as the root user on a Linux system?
+
+You are much more prone to mistakes or software bugs. I came across an example of a program which deleted files as a bug. If it ran as a limited user, at most it can damage stuff in the home directory and on a few other devices. If it ran as root user, the damage would be much larger - possibly deleting everything in the system. If you run certain commands on the command line interface, such as "rm -rf *", by mistake, it would be stopped by your lack of permissions. However if ran in root, it would have all the permissions necessary to be executed, and therefor deleted. Security is the word that sums it up. If you are logged in as root, all applications are running with root privileges, every vulnerability now can destroy the system. Even small bugs in an application could erase some system files. When your logged as root, you can do everything without the system asking for permission. So you don't get that second chance to think about the command you almost accidentally ran - its already been run. 
+
