@@ -57,3 +57,8 @@ get '/great_job' do
   end
 end
 
+get '/:number1/plus/:number2' do 
+  result = params[:number1].to_i + params[:number2].to_i
+  "The numbers added together equal #{result}"
+end
+
