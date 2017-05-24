@@ -48,3 +48,12 @@ end
 get '/contact' do
   "1 Infinite Loop, Cupertino, CA 95014"
 end
+
+get '/great_job' do 
+  if params[:name]
+    "Good job, #{params[:name]}!"
+  else
+    "Good job!"
+  end
+end
+
